@@ -28,6 +28,10 @@ Setup Android Emulator (Android Studio/Genymotion) with Web Application Security
 
 ## Setup Genymotion with Web Application Security Testing Tools (BurpSuite/OWASP ZAP/Fiddler Classic)
 
+**Genymotion is recommended for host with zscaler or proxy installed, as Genymotion allow bridge network access that most proxy services will hinders the network connectivity**
+
+**Possible drawback of Genymotion would be the emulator heavy load after GApps installed especially graphics extensive application**
+
 **Step 1**
 
 Download and install **Genymotion without virtualbox** (as virtualbox we can installed manually)
@@ -110,6 +114,8 @@ If succeed, try to intercept the application traffic !
 If unable to intercept the application traffic, re-try generate `cacert` and push to android system folder !!!
 
 ## Setup Android Studio with Web Application Security Testing Tools (BurpSuite/OWASP ZAP/Fiddler Classic)
+
+**While Android Studio is much smoother than Genymotion when come to emulator with graphic intensive application, however proxy services enabled on host might encounter network connectivity issue**
 
 **Step 1:**
 
