@@ -8,6 +8,8 @@
 
 Setup Android Emulator (Android Studio/Genymotion) with Web Application Security Testing Tools (BurpSuite/OWASP ZAP/Fiddler Classic) to intercept android web and application traffic.
 
+**The steps documented up-to-date and working as of the day this repository published, future release of Android, Android Studio or Genymotion may result inaccurate and affect the steps documented.**
+
 - [Genymotion](https://www.genymotion.com/)
 - [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjwo_KXBhAaEiwA2RZ8hOTRQ1y5o4q-rU3N1tspXohc7Ed1yAzosYIavzkKi4z3QBcBCDA_TxoCWjgQAvD_BwE&gclsrc=aw.ds)
 - [PortSwigger BurpSuite Community Edition](https://portswigger.net/burp/communitydownload)
