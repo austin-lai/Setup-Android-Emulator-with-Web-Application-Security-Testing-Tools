@@ -34,9 +34,23 @@ Setup Android Emulator (Android Studio/Genymotion) with Web Application Security
 
 **Possible drawback of Genymotion would be the emulator heavy load after GApps installed especially graphics extensive application**
 
+**Genymotion Desktop has been designed to run in a physical environment, not in a virtual machine. For this reason, Genymotion Desktop will not work if run in a Windows VM, a Windows server nor a Windows Cloud instance.**
+
 **Step 1**
 
-Download and install **Genymotion without virtualbox** (as virtualbox we can installed manually)
+Download and install **Genymotion without virtualbox** (as virtualbox we can installed manually).
+
+When we run Genymotion for the first time, it will ask us to create account.
+
+If you have created the account, you can login to Genymotion and choose your license (for demo purpose, we are going to use "personal license").
+
+Remember to add Genymotion's tools folder to your environment variable:
+
+```
+C:\Program Files\Genymobile\Genymotion\tools
+```
+
+This will allows you to use `adb` tool.
 
 **Step 2**
 
@@ -64,9 +78,19 @@ Change Oracle VirtualBox VM Setting:
 
 Power on Genymotion device.
 
+If you encounter `Unable to start the virtual device`.
+
+**You may want to check your VirtualBox version and upgrade to the version 6.1.36.**
+
 Go to <https://www.apkmirror.com/> download apk file with x86 only compatible !!!!
 
-Install `duduckgo` browser as it is very lightweight !
+Install `duckduckgo` browser as it is very lightweight !
+
+You can run below command to directly install `duckduckgo` browser:
+
+```
+adb install "com.duckduckgo.mobile.android_5.134.0-51340000_minAPI23(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk"
+```
 
 Download application you want to intercept the traffic.
 
