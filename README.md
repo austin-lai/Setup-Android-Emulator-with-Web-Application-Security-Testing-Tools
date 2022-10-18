@@ -25,6 +25,8 @@ Setup Android Emulator (Android Studio/Genymotion) with Web Application Security
     - [Table of Contents](#table-of-contents)
     - [Setup Genymotion with Web Application Security Testing Tools BurpSuite/OWASP ZAP/Fiddler Classic](#setup-genymotion-with-web-application-security-testing-tools-burpsuiteowasp-zapfiddler-classic)
     - [Setup Android Studio with Web Application Security Testing Tools BurpSuite/OWASP ZAP/Fiddler Classic](#setup-android-studio-with-web-application-security-testing-tools-burpsuiteowasp-zapfiddler-classic)
+        - [Step 5 Onward - Written on October 18th, 2022](#step-5-onward---written-on-october-18th-2022)
+        - [Step 5 Onward - Written on August 17th, 2022](#step-5-onward---written-on-august-17th-2022)
 
 <!-- /TOC -->
 
@@ -174,7 +176,7 @@ Download application, firefox and duduckgo browser.
 
 **Step 4:**
 
-Follow below link to root the ADV and install Magisk.
+Follow below link to **root** the ADV and **install Magisk**.
 
 Setup Magisk app according to the guide or github !!!
 
@@ -187,6 +189,60 @@ Copy the zip file to Android Emulator -> Download folder
 Open Magisk app -> Select Module tab -> Install from package
 
 The frida-server is always on after installed !
+
+<br />
+
+### Step 5 Onward - Written on October 18th, 2022
+
+<details><summary>Details</summary>
+
+**Step 5:**
+
+Start `Burp Suite Community | Professional`.
+
+Go to `proxy` tab -> `options` -> Setup listener IP and Port.
+
+Click `Regenerate CA Certificate`
+
+Getting ready Burp Suite `cacert` by export the `cacert` from `proxy` tab -> `options` -> `import/export CA certificate`.
+
+Select **Certificate in DER format**.
+
+Save the certificate as "cacert.der"
+
+Export `cacert` **private key** from `proxy` tab -> `options` -> `import/export CA certificate`.
+
+Select **Private key in DER format**.
+
+Save the private kay as "cacert-key.der"
+
+<br />
+
+> **This allow us to re-import back the CA Cert and CA Private Key back to Burp (with the exact same IP and host in the Proxy Listener) to prevent intercepting Android application traffics with TLS error WHENEVER restart the android emulator or burp.**
+
+<br />
+
+**Step 6:**
+
+Since we have `MagiskTrustUserCerts` installed, drag and drop `cacert.der` to `Download` folder in Android.
+
+Install the Burp CA Certificate as normal by going to Android Setting and search for `Install from device storage`.
+
+Once you have imported, go to `Magisk` application top right corner and select `Reboot`.
+
+**Step 7:**
+
+After reboot, setup proxy under wifi.
+
+</details>
+
+<br />
+
+### Step 5 Onward - Written on August 17th, 2022
+
+<details><summary>Details</summary>
+
+**Step 5:**
 
 Getting ready Burp Suite `cacert`, export the `cacert` from proxy tab -> options -> import/export CA certificate.
 
@@ -221,11 +277,14 @@ ls -l /system/etc/security/cacerts/9a5ba575.0
 chmod 644 /system/etc/security/cacerts/9a5ba575.0
 ```
 
-**Step 5:**
+**Step 6:**
 
 Reboot the emulator
 
 Setup wifi and proxy under wifi
+
+</details>
+
 
 <br />
 
