@@ -25,8 +25,8 @@ Setup Android Emulator (Android Studio/Genymotion) with Web Application Security
     - [Table of Contents](#table-of-contents)
     - [Setup Genymotion with Web Application Security Testing Tools BurpSuite/OWASP ZAP/Fiddler Classic](#setup-genymotion-with-web-application-security-testing-tools-burpsuiteowasp-zapfiddler-classic)
     - [Setup Android Studio with Web Application Security Testing Tools BurpSuite/OWASP ZAP/Fiddler Classic](#setup-android-studio-with-web-application-security-testing-tools-burpsuiteowasp-zapfiddler-classic)
-        - [Step 5 Onward - Written on October 18th, 2022](#step-5-onward---written-on-october-18th-2022)
-        - [Step 5 Onward - Written on August 17th, 2022](#step-5-onward---written-on-august-17th-2022)
+        - [Method 1 - Step 5 Onward - Written on October 18th, 2022](#method-1---step-5-onward---written-on-october-18th-2022)
+        - [Method 2 - Step 5 Onward - Written on August 17th, 2022](#method-2---step-5-onward---written-on-august-17th-2022)
 
 <!-- /TOC -->
 
@@ -192,7 +192,7 @@ The frida-server is always on after installed !
 
 <br />
 
-### Step 5 Onward - Written on October 18th, 2022
+### Method 1 - Step 5 Onward - Written on October 18th, 2022
 
 <details><summary>Details</summary>
 
@@ -238,7 +238,7 @@ After reboot, setup proxy under wifi.
 
 <br />
 
-### Step 5 Onward - Written on August 17th, 2022
+### Method 2 - Step 5 Onward - Written on August 17th, 2022
 
 <details><summary>Details</summary>
 
