@@ -82,7 +82,8 @@ Power on Genymotion device.
 
 If you encounter `Unable to start the virtual device`.
 
-**You may want to check your VirtualBox version and upgrade to the version 6.1.36.**
+- **You may want to check your VirtualBox version and upgrade to the version 6.1.36.**
+- If you are using Windows Host, you may want to check if the recently created “VirtualBox Host-Only Network” adapter is enabled. If disabled, you will need to enable it, close Genymotion, and reopen Genymotion again. Then you should have no issues starting the Android instance from Genymotion. (if unsure which adapter is recently created, you can also make sure that all VirtualBox Host Only Network adapters are enabled)
 
 Go to <https://www.apkmirror.com/> download apk file with x86 only compatible !!!!
 
@@ -134,6 +135,8 @@ Then go to `WIFI` > setup proxy according to Burp Suite and use command below to
 ```
 adb reboot
 ```
+
+> An alternative to rebooting the android instance is to toggle the android instance Wifi off, then on again. The android instance will attempt to reconnect via Android Wifi with the new proxy setting and installed certificates.
 
 By now, you should be able to intercept web traffic open browser such as google chrome or firefox.
 
